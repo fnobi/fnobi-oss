@@ -1,4 +1,4 @@
-kayac-html5-starter
+fnobi-oss
 ====
 
 ## 事前に用意するもの

@@ -30,7 +30,7 @@ const DEST = `${HTDOCS}${BASE_PATH}`;
 const TEST = '.';
 
 const revLogger = new RevLogger({
-    'kayac-html5-starter.js': `${DEST}/js/kayac-html5-starter.js`,
+    'fnobi-oss.js': `${DEST}/js/fnobi-oss.js`,
     'style.css': `${DEST}/css/style.css`
 });
 
@@ -49,7 +49,7 @@ gulp.task('css', gulp.series('sass'));
 
 // js
 gulp.task('watchify', () => {
-    return gulp.src(`${SRC}/js/kayac-html5-starter*`)
+    return gulp.src(`${SRC}/js/fnobi-oss*`)
         .pipe(transform((file) => {
             return watchify(browserify(file.path))
                 .transform(babelify)
