@@ -1,6 +1,8 @@
 fnobi-oss
 ====
 
+[![Build Status](https://travis-ci.org/fnobi/fnobi-oss.svg?branch=master)](https://travis-ci.org/fnobi/fnobi-oss)
+
 ## 事前に用意するもの
 - node.js (version 5.0.0以上)
 
