@@ -41,3 +41,8 @@ validation
 # test tmp file
 /tmp-test.html
 /test.js
+
+# build dest
+/public/index.html
+/public/css/style.css
+/public/js/fnobi-oss.js
