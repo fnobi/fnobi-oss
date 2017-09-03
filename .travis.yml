@@ -3,16 +3,18 @@ node_js:
 - 6
 script: npm run build
 deploy:
-  -
-    provider: s3
-    bucket: fnobi-oss.sasyugo.com
-    access_key_id: AKIAJCUKIP7N2MWC5OUA
-    endpoint: s3-ap-northeast-1.amazonaws.com
-    region: ap-northeast-1
-    local_dir: public
-    acl: public_read
-    skip_cleanup: true
-    on:
-      branch: develop
-    secret_access_key:
-      secure: ai4aQyZxPCoZIlRAR7JC2r2Gzr1Qq2v814WM53vlBFcbjTdDX0Q6sxiInuzFVJGya39FAXJ4hMQXOXxGB1w1O7OjxIk+4zWwQFmYPnROmm1aACraRmWnxjGhKGeMHlqh9TEjstWvs7rB1PSty+AfKyEgdGFFpFLaGHprD66Sf1+850L3uLosaWJ6uTDcTMPm70B0UWc9CYM1FkJDzu4pCfsopk9nsGVqdTeOHnFJalyWOTqR4lr3OGEHSzxGkVx6gvV0j4rW6wcola5rXw/tmWIuzzBnww9nptyJMjk0PrK9JcGl7dxjAMiTgaZDQUBSJ7xYerfGYOchAH3nzQxowimqLiZ/DcdIlF5xQaUogEKzK+13L9znSfeJShuLXQC4X6XdHCQUgtU3uMlHQb59iqnE5V0T5hF2jTmv1ZeP1opxQjzbb1oonWRjEhagZFceKeJuvalX4kCAfZDHWsVOekoKwWI8C87qH8bs6L7ylYyD0Xz+TUjlNRSM0eEjEU9Pv6lFDaj85lrXE8TXPcZ1dYFu8kWl4UWe321KKAyD5xwc+yp4HSVY3ov8a2eetiu9P1dtUwD65GVqfD5nHoyRz9nsD5Y7K3I3Uni8mEn9onlrhJ8tvwdbnQM3zl/th9WdbHNP1DSwEy3w6omq6YqlMZp15O3qByjw5TuT2t4ycEY=
+- provider: s3
+  bucket: fnobi-oss.sasyugo.com
+  access_key_id: AKIAJCUKIP7N2MWC5OUA
+  endpoint: s3-ap-northeast-1.amazonaws.com
+  region: ap-northeast-1
+  local_dir: public
+  acl: public_read
+  skip_cleanup: true
+  on:
+    branch: develop
+  secret_access_key:
+    secure: ai4aQyZxPCoZIlRAR7JC2r2Gzr1Qq2v814WM53vlBFcbjTdDX0Q6sxiInuzFVJGya39FAXJ4hMQXOXxGB1w1O7OjxIk+4zWwQFmYPnROmm1aACraRmWnxjGhKGeMHlqh9TEjstWvs7rB1PSty+AfKyEgdGFFpFLaGHprD66Sf1+850L3uLosaWJ6uTDcTMPm70B0UWc9CYM1FkJDzu4pCfsopk9nsGVqdTeOHnFJalyWOTqR4lr3OGEHSzxGkVx6gvV0j4rW6wcola5rXw/tmWIuzzBnww9nptyJMjk0PrK9JcGl7dxjAMiTgaZDQUBSJ7xYerfGYOchAH3nzQxowimqLiZ/DcdIlF5xQaUogEKzK+13L9znSfeJShuLXQC4X6XdHCQUgtU3uMlHQb59iqnE5V0T5hF2jTmv1ZeP1opxQjzbb1oonWRjEhagZFceKeJuvalX4kCAfZDHWsVOekoKwWI8C87qH8bs6L7ylYyD0Xz+TUjlNRSM0eEjEU9Pv6lFDaj85lrXE8TXPcZ1dYFu8kWl4UWe321KKAyD5xwc+yp4HSVY3ov8a2eetiu9P1dtUwD65GVqfD5nHoyRz9nsD5Y7K3I3Uni8mEn9onlrhJ8tvwdbnQM3zl/th9WdbHNP1DSwEy3w6omq6YqlMZp15O3qByjw5TuT2t4ycEY=
+notifications:
+  slack:
+    secure: IS+vX7sRgqM9IrzUZ/IEpqfDUJ69ZyrHCRhPRyWOBxEUmVMcZD2HBeyg3X95fSbhegeeny5hOS3oEmjXsWhQGrvL6xFl9NM1BF9TrzVRRD7C0jvykiTMpn6mhZ7zrv4oCj00PdY00dn05NsEuCFyN96SJltxALC3s18eo4sxuK/Br/ETK9MdG/fI/ah9m3oyi04xcwtbfwUK//Cbdu1YqjyckNTfiN3lY0oLmjE/M9iCeTeCYHG1P3Zw0iHnDVpbAn4CIDTgn4tZS3+NfUxDGA6Ub1zuLQMConZvaNjoIT2mLxbM2g1PdlE/0K4YBwfyXsNtbcgrW9aZPOOTG3hQ8kBGlHzDtGnY7Huhd33j+xQw9p9tROoBJGV02KaGmeA/1emvdmfrKPD9X5w3nyLDPOegmUKWL3Pjhy2Oyw8CmT63Z52gRKIxlU6JVtP5zBYhMVKj9E1+RhZXcEHdBxEUl0d28jpLCs+JWnX+A0AmrOtSaPpN7K4KlFRN8zUHB5vo3cU2/Jeo6IiMF1YkVeGHswz/Qhaksqfr/rpgOQHM6SDOGmQ0Fd24BQeey0yfnCQ2U+3oyQL67zoseTRfV15KkxPQZ1C2dIGZ359KTLtG8X9JbQ3M/ruhefXCPcHOb0lgJedcyvx5fkiI/1DebQct0gVAS/Nah8gnfO9UvuEPu2k=
