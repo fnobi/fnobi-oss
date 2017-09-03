@@ -28,3 +28,18 @@ keywords: []
 
 # iOSにて、サイトをホーム画面に追加した際の、ステータスバーの挙動指定
 # ios_status_bar: default
+
+works:
+  -
+    name: axis-psd
+    github: fnobi/axis-psd
+    desc: PSDファイルからいい感じに座標を書き出すCLIツールです
+  -
+    name: image-even
+    github: fnobi/image-even
+    desc: 画像を一括で偶数ピクセルに直すなど、マークアップエンジニアのための画像リサイズツールです
+  -
+    name: koko
+    github: fnobi/koko
+    desc: とにかくすぐに、現在のディレクトリをルートにしたWebサーバーを呼び出したい時に使えるツールです
+    article: http://qiita.com/fnobi/items/cf8ffae04e6c530958c7
