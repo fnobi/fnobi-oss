@@ -2,7 +2,7 @@
 site_name: fnobi-oss
 
 # meta description（og:description・twitter:descriptionでも使用）
-description: fnobi-oss web page.
+description: fnobiのOSSプロジェクトをかいつまんで紹介しています。
 
 # meta keywords
 keywords: []
@@ -38,6 +38,10 @@ works:
     name: image-even
     github: fnobi/image-even
     desc: 画像を一括で偶数ピクセルに直すなど、マークアップエンジニアのための画像リサイズツールです
+  -
+    name: sector-slide
+    github: fnobi/sector-slide
+    desc: 通常のドキュメントを書くのとさほど変わらない感覚でmarkdownを記述、それをそのままスライドに変換できます
   -
     name: koko
     github: fnobi/koko
