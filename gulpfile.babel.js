@@ -6,7 +6,6 @@ import gutil from 'gutil';
 import sass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
 import pleeease from 'gulp-pleeease';
-import watchify from 'watchify';
 import browserify from 'browserify';
 import babelify from 'babelify';
 import pug from 'gulp-pug';
@@ -48,10 +47,10 @@ gulp.task('sass', () => {
 gulp.task('css', gulp.series('sass'));
 
 // js
-gulp.task('watchify', () => {
+gulp.task('browserify', () => {
     return gulp.src(`${SRC}/js/fnobi-oss*`)
         .pipe(transform((file) => {
-            return watchify(browserify(file.path))
+            return browserify(file.path)
                 .transform(babelify)
                 .bundle();
         }))
@@ -63,10 +62,10 @@ gulp.task('watchify', () => {
         .pipe(gulp.dest(`${DEST}/js`));
 });
 
-gulp.task('watchify-test', () => {
+gulp.task('browserify-test', () => {
     return gulp.src(`${SRC}/js/test.js`)
         .pipe(transform((file) => {
-            return watchify(browserify(file.path))
+            return browserify(file.path)
                 .transform(babelify)
                 .bundle();
         }))
@@ -78,7 +77,7 @@ gulp.task('watchify-test', () => {
         .pipe(gulp.dest(TEST));
 });
 
-gulp.task('js', gulp.parallel('watchify'));
+gulp.task('js', gulp.parallel('browserify'));
 
 
 // html
@@ -119,7 +118,7 @@ gulp.task('browser-sync', () => {
     });
 
     watch([`${SRC}/scss/**/*.scss`], gulp.series('sass', browserSync.reload));
-    watch([`${SRC}/js/**/*.js`], gulp.series('watchify', browserSync.reload));
+    watch([`${SRC}/js/**/*.js`], gulp.series('browserify', browserSync.reload));
     watch([
         `${SRC}/pug/**/*.pug`,
         `${SRC}/config/meta.yml`
@@ -150,7 +149,7 @@ gulp.task('mocha', () => {
         }));
 });
 
-gulp.task('test', gulp.series('watchify-test', 'mocha'));
+gulp.task('test', gulp.series('browserify-test', 'mocha'));
 
 
 // default
