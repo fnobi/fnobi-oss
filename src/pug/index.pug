@@ -8,11 +8,13 @@ prepend config-block
 //- append javascript-block
 
 block content-block
-  h1 fnobi-oss
-  each work in works
-    article
-      h2
-        a(href=`https://github.com/${work.github}` target="_blank")= work.name
-      p= work.desc
-      if work.article
-        p: a(href=work.article target="_blank") 紹介記事
+  .header
+    h1 fnobi-oss
+  .article
+    each work in works
+      article.article__item
+        h2
+          a(href=`https://github.com/${work.github}` target="_blank")= work.name
+        p= work.desc
+        if work.article
+          p: a(href=work.article target="_blank") 紹介記事
