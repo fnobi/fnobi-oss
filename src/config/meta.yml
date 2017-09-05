@@ -54,9 +54,6 @@ works:
     name: rev-logger
     github: fnobi/rev-logger
   -
-    name: ejs
-    github: fnobi/ejs
-  -
     name: php-express
     github: fnobi/php-express
   -
