@@ -10,10 +10,10 @@ prepend config-block
 block content-block
   .header
     h1 fnobi-oss
-  .article
+  .top-layout
     each work in works
-      article.article__item
-        h2
+      article.top-layout__item: .article
+        h2.article__title
           a(href=`https://github.com/${work.github}` target="_blank")= work.name
         p= work.desc
         if work.article

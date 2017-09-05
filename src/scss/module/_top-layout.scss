@@ -1,0 +1,16 @@
+.top-layout {
+    margin-top: 20px;
+    @include pc-layout {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.top-layout__item {
+    margin: 20px;
+    @include pc-layout {
+        margin-top: 0px;
+        margin-right: 0px;
+        width: 300px;
+    }
+}
