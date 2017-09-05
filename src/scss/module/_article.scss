@@ -1,0 +1,17 @@
+.article {
+    display: block;
+    padding: 15px 20px;
+    background-color: #111;
+    border: solid 1px #333;
+    font-size: 12px;
+    color: #ccc;
+    a {
+        color: inherit;
+    }
+}
+
+.article__title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}

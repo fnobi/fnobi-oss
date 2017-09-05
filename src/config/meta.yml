@@ -47,3 +47,27 @@ works:
     github: fnobi/koko
     desc: とにかくすぐに、現在のディレクトリをルートにしたWebサーバーを呼び出したい時に使えるツールです
     article: http://qiita.com/fnobi/items/cf8ffae04e6c530958c7
+  -
+    name: ejs-cli
+    github: fnobi/ejs-cli
+  -
+    name: rev-logger
+    github: fnobi/rev-logger
+  -
+    name: php-express
+    github: fnobi/php-express
+  -
+    name: gulp-postman
+    github: fnobi/gulp-postman
+  -
+    name: toichi
+    github: fnobi/toichi
+  -
+    name: sheet-loader
+    github: fnobi/sheet-loader
+  -
+    name: vidcap
+    github: fnobi/vidcap
+  -
+    name: gulp-instant-mocha
+    github: fnobi/gulp-instant-mocha
