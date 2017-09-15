@@ -50,6 +50,7 @@ works:
   -
     name: ejs-cli
     github: fnobi/ejs-cli
+    desc: コマンドラインからejsのコンパイルが行えるCLIツールです シンプルです
   -
     name: rev-logger
     github: fnobi/rev-logger
